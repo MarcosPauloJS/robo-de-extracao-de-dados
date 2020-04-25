@@ -1,4 +1,4 @@
-### Decrição
+### Descrição
 
 Escreva sua descrição aqui ^-^
 
