@@ -1,5 +1,8 @@
+const extractCSV = require('../utils/extractCSV/extractCSV');
+
 module.exports ={
-    index(req, res){
-        response.send('Em contrução')
+    async index(req, res){
+        console.log( await extractCSV())
+        res.send('Em contrução')
     }
 }
