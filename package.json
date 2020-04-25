@@ -1,0 +1,19 @@
+{
+  "name": "robo-de-extracao-de-dados",
+  "version": "0.0.1",
+  "description": "Robo de extração de dados",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js" 
+  },
+  "author": "Sushi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosPauloJS/robo-de-extracao-de-dados/issues"
+  },
+  "homepage": "https://github.com/MarcosPauloJS/robo-de-extracao-de-dados#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
