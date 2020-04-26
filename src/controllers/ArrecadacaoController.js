@@ -14,7 +14,7 @@ module.exports ={
         })
 
         // remove as informações não pertencente a planilha
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 15; i++) {
             separateData.shift();
         };
 
@@ -26,17 +26,13 @@ module.exports ={
 
             console.log(columnIndex)
             if(columnIndex == 0){
-                // console.log(typeof agroupData)
                 agroupData[rowIndex] = [item];
-                // console.log(agroupData)
 
             }
             else{
                 console.log("row" + rowIndex)
-                // console.log(agroupData.length)
-                // console.log(agroupData[columnIndex])
+
                 agroupData[rowIndex].push(item); 
-                // console.log(agroupData)
             }
 
             if(columnIndex <= 27){
@@ -48,8 +44,6 @@ module.exports ={
             }
           
         })
-
-        console.log(agroupData)
         res.send(agroupData)
     }
 }
