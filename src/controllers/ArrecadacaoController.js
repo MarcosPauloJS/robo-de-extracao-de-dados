@@ -17,48 +17,39 @@ module.exports ={
         for (let i = 0; i < 4; i++) {
             separateData.shift();
         };
-        
-        let agrupData =[];
-        for( let i = 0; i < 27; i++){
-            agrupData.push({
-                State : separateData[i+1],
-                revenue: []
-            })
-        }
 
-        // remove o cabelhalho da planilha após ter salvo em outra planilha
-        for (let i = 0; i < 29; i++) {
-            separateData.shift();
-        };
-        
-        columnIndex = 0;
-        teste = 0;
+        let columnIndex = 0
+        let rowIndex = 0;
+        let agroupData = [];
 
-        separateData.forEach( (item, index) => {
-            if(columnIndex === 0){
-            console.log("========================== IF ====================")
-            // console.log(
-            // console.log(columnIndex)
-            // console.log(teste)
-            // agrupData.forEach( (arr, index) =>{
-            //     console.log(index)
-            //     console.log(agrupData)
-            //     console.log(agrupData[teste].revenue = 5)
-            // })
-            console.log(agrupData[teste])
-            console.log(agrupData[teste].revenue.push([item]))
+        separateData.forEach( (item)=>{
 
+            console.log(columnIndex)
+            if(columnIndex == 0){
+                // console.log(typeof agroupData)
+                agroupData[rowIndex] = [item];
+                // console.log(agroupData)
 
-        }
-        // columnIndex = columnIndex < 28 ? (columnIndex + 1) : 0;
-        teste = teste < 26 ? (teste + 1) : 0;
-        columnIndex = columnIndex < 28 ? (columnIndex + 1) : 0;
+            }
+            else{
+                console.log("row" + rowIndex)
+                // console.log(agroupData.length)
+                // console.log(agroupData[columnIndex])
+                agroupData[rowIndex].push(item); 
+                // console.log(agroupData)
+            }
+
+            if(columnIndex <= 27){
+                columnIndex ++;
+            }
+            else{
+                columnIndex = 0 ;
+                rowIndex ++;
+            }
+          
         })
 
-
-
-        console.log(agrupData)
-        // console.log(separateData)
-        res.send(separateData)
+        console.log(agroupData)
+        res.send(agroupData)
     }
 }
