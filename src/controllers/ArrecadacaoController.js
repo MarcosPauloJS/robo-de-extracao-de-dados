@@ -44,6 +44,6 @@ module.exports ={
             }
           
         })
-        res.send(agroupData)
+        res.json({agroupData})
     }
 }
